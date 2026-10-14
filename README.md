@@ -1,59 +1,79 @@
-# Silky Beauty Enterprise
+# Silky Beauty Enterprise — Glass UI Website
 
-A mobile-responsive skincare guidance website prototype with a premium champagne-gold, rose-pink and ivory design.
+A responsive React + Vite prototype for an India-focused skincare education brand. The visual style is inspired by macOS glassmorphism: translucent frosted panels, soft gradients, gentle borders, and a premium blush / pearl / lilac palette.
 
-## Quick start
+## Features in this demo
 
-This is a static website: no Node.js, package install, build command or API key is needed.
+- Login screen appears first; demo sign-in works with the sample credentials below.
+- Interactive skin profile questionnaire with skin type, concern, hydration, environment, skin tone, and fragrance preference.
+- Different rule-based routines for dry, oily, combination, sensitive, dehydrated, and selected concern profiles.
+- Optional JPG, PNG, or WebP image preview; images are compressed locally in the browser and never uploaded.
+- Sample product catalogue with search and filters. Product art is generated locally with CSS to avoid broken image URLs.
+- Morning/evening routine, ingredient notes, printable routine (use browser Print → Save as PDF), TXT download, share/copy fallback.
+- Temporary notes and routine checklist.
+- Contact demo form with no fake sending claim.
+- Clear My Data and logout controls.
+- Responsive mobile navigation and GitHub Pages workflow.
 
-- Open `index.html` in a browser, **or**
-- Run a local server from this folder:
+## Demo login
 
-```bash
-python -m http.server 8000
+- **Email:** `demo@silkybeauty.in`
+- **Password:** `SilkyDemo123`
+
+This is a front-end demo gate, not real authentication. Do not use real passwords.
+
+## Run locally
+
+1. Install Node.js 20 or later.
+2. Open this folder in a terminal.
+3. Install packages:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open the local URL printed in the terminal.
+6. Test the production build:
+   ```bash
+   npm run build
+   npm run preview
+   ```
+
+## Publish with GitHub Desktop and GitHub Pages
+
+1. Copy the **contents** of this project folder into your GitHub repository root (the `package.json`, `index.html`, `src/`, `public/`, `.github/`, etc.).
+2. Open GitHub Desktop and commit the changed files to your default branch (`main` or `master`).
+3. Click **Push origin**.
+4. On GitHub, open your repository → **Settings → Pages**.
+5. Under **Build and deployment**, choose **GitHub Actions** as the source.
+6. Open the **Actions** tab and wait for `Deploy Silky Beauty to GitHub Pages` to finish with a green check.
+7. Open Settings → Pages → **Visit site**.
+
+The Vite config detects the repository name from `GITHUB_REPOSITORY` in GitHub Actions and sets the correct `/repository-name/` base path for project sites. For a repository named `username.github.io`, it uses `/`.
+
+## Privacy and demo limitations
+
+- Answers, notes, tasks, and the optional photo preview are held in in-page state only; no questionnaire data or image is uploaded to a server or saved to a database/localStorage. Logging out or refreshing clears the temporary page state.
+- The sample login is not secure authentication and must not be used for real customer accounts.
+- Product brands are independent third parties. This prototype does not claim to stock, manufacture, or have partnerships with them. Product images are illustrative CSS artwork, not actual pack photography. Prices are not invented; the UI says to check current price.
+- The contact form is a demo-only submission and does not send or store messages because GitHub Pages is static hosting.
+- Routine suggestions are cosmetic education, not diagnosis or medical advice. Patch-test new products. Seek a qualified dermatologist for persistent irritation, severe acne, rashes, or other medical concerns.
+- Google Fonts are requested from Google when network access is available; system font fallbacks are provided.
+
+## Project structure
+
+```text
+silky-beauty-final/
+├── .github/workflows/pages.yml
+├── public/assets/favicon.svg
+├── src/App.jsx
+├── src/main.jsx
+├── src/styles.css
+├── index.html
+├── package.json
+├── vite.config.js
+├── .gitignore
+└── README.md
 ```
-
-Then visit `http://localhost:8000`.
-
-## Publish on GitHub Pages
-
-1. Create a new public GitHub repository, for example `silky-beauty-enterprise`.
-2. Extract the ZIP file and upload the **contents** of the `silky-beauty-github` folder to the repository root. The root must contain `index.html`, `styles.css`, `app.js`, `assets/`, and `.github/`.
-3. Commit the files to the `main` branch.
-4. Open **Settings → Pages** in the repository.
-5. Under **Build and deployment**, choose **GitHub Actions** as the source. The included workflow publishes the static site.
-6. Open the **Actions** tab and wait for the “Deploy static site to GitHub Pages” workflow to finish successfully.
-7. Open the Pages URL shown in Settings → Pages. It usually looks like `https://YOUR-USERNAME.github.io/REPOSITORY-NAME/`.
-
-If using a repository named `YOUR-USERNAME.github.io`, the URL is `https://YOUR-USERNAME.github.io/`.
-
-## Included features
-
-- Responsive landing page, skin-type guide, hydration guide, FAQ and sample product catalogue
-- Multi-step assessment with progress, draft save, optional consent-gated image preview and client-side image compression
-- Rule-based skincare suggestions and AM/PM routine
-- Browser-local customer dashboard, assessment history, favourites, notes and task management
-- Share/copy summary fallback and downloadable text report
-- Contact form saved locally in the browser
-- Demo admin console with product add/edit/archive, landing copy editor, enquiry review, analytics and CSV export
-- Local demo data export and reset
-
-## Prototype limitations — read before production
-
-- Data is stored in the current browser's `localStorage`; it does not sync across devices.
-- Demo login is not secure authentication. The admin view is not protected by server-side role-based authorization.
-- Photo selection is optional and uses a temporary browser preview only. No image is uploaded to cloud storage.
-- Report downloads as TXT, not PDF.
-- Contact form submissions stay in browser storage; no email is sent.
-- Catalogue details and prices are illustrative demo data. Product packaging imagery is CSS-generated placeholder art, not product photography. Verify products, pricing, ingredients, links and image usage rights before launch.
-- No database, Supabase, payment gateway, AI API, real email service or production authentication is connected.
-
-## Production checklist
-
-Before accepting real customers or sensitive data, add secure authentication, server-side authorization, database persistence, private object storage with access policies, privacy and consent flows, real verified catalogue data and authorized imagery, true PDF generation, email delivery, backups, monitoring and security testing. Never rely on client-side demo roles for admin security.
-
-## Brand
-
-**Silky Beauty Enterprise**  
-Regards: **Chandana Sree Yeddula**  
-Currency: INR (₹) · Market: India

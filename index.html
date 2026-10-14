@@ -1,116 +1,12 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fff8f5">
-  <meta name="description" content="Silky Beauty Enterprise — personalised skincare guidance and beauty discovery.">
-  <title>Silky Beauty Enterprise | Your Skin. Your Routine. Your Glow.</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="app.js"></script>
-</head>
-<body>
-  <div class="announcement">A LITTLE SELF-CARE, A LOT OF GLOW <span>✦</span> BEAUTY GUIDANCE MADE PERSONAL</div>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="Silky Beauty Enterprise home">
-      <span class="brand-mark">✿</span><span class="brand-name">Silky Beauty<small>ENTERPRISE</small></span>
-    </a>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-    <nav class="main-nav" id="main-nav">
-      <a href="#how">How it works</a><a href="#guides">Skin guide</a><a href="#products">Products</a>
-      <a href="#faq">FAQs</a><button class="nav-link" data-view="dashboard">My space</button>
-      <button class="button button-small button-primary" data-view="assessment">Discover my routine</button>
-    </nav>
-  </header>
-
-  <main id="app">
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">A more personal kind of skincare</p>
-          <h1>Your Skin.<br><em>Your Routine.</em><br>Your Glow.</h1>
-          <p class="hero-description">Discover personalised skincare routines and beauty recommendations designed around your skin's unique needs.</p>
-          <div class="button-row"><button class="button button-primary" data-view="assessment">Discover My Skin Routine <span>↗</span></button><a class="button button-ghost" href="#products">Explore beauty products</a></div>
-          <p class="small-note">♡ Thoughtful guidance · India-focused sample catalogue · Free demo</p>
-        </div>
-        <div class="hero-visual" role="img" aria-label="Abstract warm-toned beauty illustration">
-          <div class="visual-stamp"><small>MADE FOR YOUR SKIN</small><strong>Small steps.<br>Softer glow.</strong></div>
-          <div class="face-shape"></div><div class="visual-note"><strong>Glow, gently.</strong><br>Build a routine around your needs—not trends.</div>
-          <span class="sparkle sparkle-one">✧</span><span class="sparkle sparkle-two">✦</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="how">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">Your glow journey</p><h2>Skincare that starts with you.</h2><p>A simple, thoughtful approach to understanding what your skin may need.</p></div>
-        <div class="three-cards">
-          <article class="info-card"><span class="icon-tile">✧</span><p class="step-label">01 / UNDERSTAND</p><h3>Tell us about your skin</h3><p>Share your skin type, hydration concerns and current routine. A photo is completely optional.</p></article>
-          <article class="info-card"><span class="icon-tile">❋</span><p class="step-label">02 / PERSONALISE</p><h3>Get your routine</h3><p>Explore general cosmetic guidance, a morning and evening plan, and ingredients to consider.</p></article>
-          <article class="info-card"><span class="icon-tile">♡</span><p class="step-label">03 / BUILD HABITS</p><h3>Make it a ritual</h3><p>Save products, track tasks, add notes and revisit your assessment whenever you like.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-blush" id="guides">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">Know your skin</p><h2>Every skin story is different.</h2><p>These are starting points, not labels. Skin can change with weather, products and life.</p></div>
-        <div class="four-cards">
-          <article class="skin-card"><span class="skin-symbol">☁</span><h3>Dry</h3><p>May feel tight or rough. Try gentle cleansing and a moisturiser with humectants and emollients.</p></article>
-          <article class="skin-card"><span class="skin-symbol">◉</span><h3>Oily</h3><p>May look shiny through the day. Choose a gentle cleanser and lightweight moisturiser.</p></article>
-          <article class="skin-card"><span class="skin-symbol">◐</span><h3>Combination</h3><p>May be oily in some areas and dry in others. Adjust product texture by facial area.</p></article>
-          <article class="skin-card"><span class="skin-symbol">❀</span><h3>Sensitive</h3><p>May react easily. Prioritise fragrance-free options and introduce products gradually.</p></article>
-        </div>
-        <div class="hydration-banner"><div><p class="eyebrow">Hydration essentials</p><h3>A healthy routine can stay simple.</h3><p>Look for ingredients like glycerin, hyaluronic acid and ceramides when suitable for your skin.</p></div><button class="button button-dark" data-view="assessment">Find my starting point →</button></div>
-      </div>
-    </section>
-
-    <section class="section" id="products">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">The beauty edit</p><h2>Thoughtful picks for your routine.</h2><p>Illustrative catalogue entries for this prototype. Check current details and pricing with the seller.</p></div>
-        <div class="product-grid" id="featured-products"></div>
-        <div class="center-actions"><button class="button button-ghost" data-view="products">Explore all sample products</button></div>
-      </div>
-    </section>
-
-    <section class="section section-cream">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">Your everyday ritual</p><h2>Less guesswork. More consistency.</h2></div>
-        <div class="routine-grid">
-          <article class="routine-card"><span class="routine-label">AM · MORNING</span><h3>Start your day gently</h3><ol><li>Cleanse without stripping</li><li>Moisturise to support your skin barrier</li><li>Apply broad-spectrum SPF 30+ sunscreen</li></ol></article>
-          <article class="routine-card"><span class="routine-label">PM · EVENING</span><h3>Wind down with care</h3><ol><li>Remove sunscreen and cleanse gently</li><li>Apply a suitable moisturiser</li><li>Add treatments slowly, only if appropriate</li></ol></article>
-        </div>
-        <p class="small-note center">Patch-test new products. Seek a qualified dermatologist for persistent irritation or medical concerns.</p>
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="container narrow">
-        <div class="section-heading"><p class="eyebrow">A few helpful answers</p><h2>Frequently asked questions</h2></div>
-        <details><summary>Is this a medical skin diagnosis?</summary><p>No. The assessment offers general cosmetic guidance based on answers you provide. It does not diagnose conditions or analyse photos for medical purposes.</p></details>
-        <details><summary>Do I need to upload a face photo?</summary><p>No. A photo is optional. In this browser-only prototype, images are previewed locally and are not sent to cloud storage.</p></details>
-        <details><summary>Are product prices and links live?</summary><p>No. Catalogue items and prices are illustrative demo data. Check the brand or retailer for current pricing, ingredients and availability.</p></details>
-        <details><summary>Will my data be available on another device?</summary><p>Demo data is stored in this browser's local storage. It does not sync between devices and is not suitable for sensitive production data.</p></details>
-      </div>
-    </section>
-
-    <section class="section section-blush">
-      <div class="container contact-banner"><div><p class="eyebrow">Your next step</p><h2>Ready to meet your skin?</h2><p>Take the quick assessment and build your first routine.</p></div><button class="button button-primary" data-view="assessment">Begin my skin assessment →</button></div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div><a class="brand footer-brand" href="#home"><span class="brand-mark">✿</span><span class="brand-name">Silky Beauty<small>ENTERPRISE</small></span></a><p>Thoughtful skincare guidance that starts with understanding your needs.</p><p class="footer-disclaimer">General cosmetic guidance only. Not a medical diagnosis.</p></div>
-      <div><h4>Explore</h4><a href="#how">How it works</a><a href="#guides">Skin guides</a><a href="#products">Product catalogue</a><button class="footer-button" data-view="assessment">Skin assessment</button></div>
-      <div><h4>Contact</h4><p>Business contact details will be added by the administrator.</p><button class="footer-button" data-view="contact">Send an enquiry →</button><p>Regards,<br>Chandana Sree Yeddula</p></div>
-    </div>
-    <div class="container copyright">© <span id="year"></span> Silky Beauty Enterprise · Prototype experience · Sample product listings do not imply official brand partnerships.</div>
-  </footer>
-
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <div id="modal-root"></div>
-  <div class="mobile-dock"><button data-view="home">⌂<span>Home</span></button><button data-view="assessment">✧<span>Assess</span></button><button data-view="products">♡<span>Products</span></button><button data-view="dashboard">◉<span>My space</span></button></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f3f4" />
+    <meta name="description" content="Personalised skincare education and routine discovery from Silky Beauty Enterprise." />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <title>Silky Beauty Enterprise — Your Skin. Your Science. Your Glow.</title>
+  </head>
+  <body><div id="root"></div><script type="module" src="./src/main.jsx"></script></body>
 </html>
